@@ -100,5 +100,5 @@ path/to/your/workspace/mil-plane/
 3. Execute the **Preprocessing** cell to parse the XML files into standard YOLO training labels.
 4. Run the respective **Training** cells for the models you wish to evaluate.
 5. Launch the final **Gradio UI Dashboard** cell to manually test images against the trained weights.
-<br>
+
 [Google Colab Link](https://colab.research.google.com/drive/1mHSmVubNYTysTgPzh9Fa4KP8sbpMdnyy?usp=sharing)
