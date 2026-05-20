@@ -84,7 +84,7 @@ All three variations are trained under strict identical experimental conditions 
 | **YOLOv11s-OBB** | Oriented / Rotated | **0.873** | 0.858 | **0.913** | **0.791** | 5.7 ms / image |
 | **YOLOv11s-Horizontal**| Axis-Aligned | 0.869 | **0.866** | 0.905 | 0.693 | 5.8 ms / image |
 | **YOLOv26n** | Axis-Aligned | 0.749 | 0.732 | 0.794 | 0.600 | **3.4 ms / image** |
-
+<img width="1484" height="583" alt="image" src="https://github.com/user-attachments/assets/31f49b41-631d-46f3-9f0a-7b7f05732106" />
 ### 🔍 Key Engineering Takeaways
 1. **The OBB Localization Advantage:** YOLOv11s-OBB provides an absolute gain of **+0.098** in strict localization accuracy (mAP50-95) over its horizontal twin. This represents a **14.1% relative improvement**. By eliminating irrelevant background ground clutter within a box, the oriented box ensures higher IoU calculation scores.
 2. **YOLOv26 Speed Superiority:** Despite its smaller parameter architecture footprint (~1.9M vs. ~9.4M parameters), YOLOv26n drops inference down to **3.4 ms**. Its **NMS-Free** design eliminates the processing overhead typically caused by post-prediction sorting bottlenecks.
@@ -143,4 +143,4 @@ The graphical interface (`app.py`) parses raw detection output into actionable i
 * **Input Channel options:** Interactive click-and-drop manual image uploads or local array loops through the MAR20 dataset via Google Drive paths.
 * **Intelligence Reporting Summary Output:** Outputs detailed target lists using descriptive labels (e.g., mapping class `A13` directly to **F-15** and class `A1` to **SU-35**).
 
-```
+
