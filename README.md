@@ -8,7 +8,6 @@ A deep learning pipeline designed to train, evaluate, and benchmark three high-p
 | **YOLOv11s-Horizontal** | Axis-Aligned Rectangle | Decoupled Anchor-Free | Standard production pipeline integration |
 | **YOLOv11s-OBB** | Oriented / Rotated Polygon | Decoupled with Angle Regression ($\theta$) | Maximum geometric precision |
 | **YOLOv26n** | Axis-Aligned Rectangle | Next-Gen **NMS-Free** End-to-End | Real-time edge and mobile deployment |
-<img width="1484" height="583" alt="image" src="https://github.com/user-attachments/assets/31f49b41-631d-46f3-9f0a-7b7f05732106" />
 
 ---
 
@@ -63,11 +62,12 @@ All three variations are trained under strict identical experimental conditions 
 
 ### 📊 Performance Leaderboard
 
-| Model Architecture | Bounding Box Mode | Precision ($P$) | Recall ($R$) | mAP50 | mAP50-95 (Primary Metric) | Latency (Inference) |
+| Model Architecture | Bounding Box Mode | Precision ($P$) | Recall ($R$) | mAP50 | mAP50-95 (Primary Metric) | Latency (Inference in CPU) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **YOLOv11s-OBB** | Oriented / Rotated | **0.873** | 0.858 | **0.913** | **0.791** | 5.7 ms / image |
 | **YOLOv11s-Horizontal**| Axis-Aligned | 0.869 | **0.866** | 0.905 | 0.693 | 5.8 ms / image |
 | **YOLOv26n** | Axis-Aligned | 0.749 | 0.732 | 0.794 | 0.600 | **3.4 ms / image** |
+<img width="1484" height="583" alt="image" src="https://github.com/user-attachments/assets/31f49b41-631d-46f3-9f0a-7b7f05732106" />
 
 ### 🔍 Key Engineering Takeaways
 1. **The OBB Localization Advantage:** YOLOv11s-OBB provides an absolute gain of **+0.098** in strict localization accuracy (mAP50-95) over its horizontal twin. This represents a **14.1% relative improvement**. By eliminating irrelevant background ground clutter within a box, the oriented box ensures higher IoU calculation scores.
