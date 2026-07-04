@@ -3,11 +3,12 @@
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch)
 ![Ultralytics](https://img.shields.io/badge/Ultralytics-YOLO-111F68)
+![AI-assisted](https://img.shields.io/badge/AI%20assisted-blueviolet?logo=ai)
 ![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter)
 [![Google Colab](https://img.shields.io/badge/Open%20in-Colab-F9AB00?logo=googlecolab)](https://colab.research.google.com/drive/1mHSmVubNYTysTgPzh9Fa4KP8sbpMdnyy?usp=sharing)
 [![Dataset: MAR20](https://img.shields.io/badge/Dataset-Google%20Drive-4285F4?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1syZVVdd-k6zbWglQPyn_ZAwqbP2r-i1R?usp=sharing)
 
-A deep learning pipeline designed to train, evaluate, and benchmark three high-performance object detection architectures on top-down aerial surveillance imagery. This entire project is structured, executed, and analyzed inside a single Master Jupyter Notebook.
+A deep learning pipeline designed to train, evaluate, and benchmark three high-performance object detection architectures on top-down aerial surveillance imagery. This entire project is structured, ex[...]
 
 | Model Variant | Bounding Box Type | Architectural Paradigm | Target Use Case |
 | :--- | :--- | :--- | :--- |
@@ -20,9 +21,9 @@ A deep learning pipeline designed to train, evaluate, and benchmark three high-p
 ## 📊 Dataset: MAR20 (Military Aircraft Recognition)
 
 > [!IMPORTANT]
-> **Dataset Naming Note:** In the source code, variables, and local directory structures, the dataset folder is named `mil-plane`. In reality, this project utilizes the standard **MAR20 (Military Aircraft Recognition) Aerial Aircraft Dataset**.
+> **Dataset Naming Note:** In the source code, variables, and local directory structures, the dataset folder is named `mil-plane`. In reality, this project utilizes the standard **MAR20 (Military a...
 
-The MAR20 dataset contains challenging, high-resolution top-down captures of aircraft sitting on runways, taxiways, open aprons, and hangars. It contains **20 specific military aircraft classes** (coded `A1` through `A20`):
+The MAR20 dataset contains challenging, high-resolution top-down captures of aircraft sitting on runways, taxiways, open aprons, and hangars. It contains **20 specific military aircraft classes** (cod[...]
 
 
 ```
@@ -45,7 +46,7 @@ mil-plane/ (MAR20 Dataset Root Directory)
 The entire engineering pipeline is self-contained within `airplane_detection.ipynb`. The notebook is organized into sequential, execution-ready cells:
 
 1. **Environment Setup & Configuration:** Installation of dependencies (`ultralytics`, `gradio`, etc.) and setting path variables pointing to the `mil-plane` directory.
-2. **Dataset Preprocessing & Conversion:** Parsing the raw Pascal VOC XML annotations from the `mil-plane` directory and formatting them into standard horizontal YOLO text labels and Oriented Bounding Box (OBB) labels.
+2. **Dataset Preprocessing & Conversion:** Parsing the raw Pascal VOC XML annotations from the `mil-plane` directory and formatting them into standard horizontal YOLO text labels and Oriented Boun[...]
 3. **Model Training Pipelines:** Sequential training configurations for all three variations (`YOLOv11s`, `YOLOv11s-OBB`, and `YOLOv26n`).
 4. **Evaluation & Comparative Analysis:** Generating validation metrics, computing inference speed latencies, and outputting performance comparison tables.
 5. **Interactive UI Deployment:** An inline Gradio interface cell to load the trained weights and perform real-time test inferences with explicit class name mapping.
@@ -60,7 +61,7 @@ All three variations are trained under strict identical experimental conditions 
 * **Resolution:** Normalized to $640 \times 640$ pixels
 * **Batch Size:** 48 (Optimized for VRAM efficiency)
 * **Optimizer Tuning:** Automatically managed AdamW execution via the Ultralytics framework
-* **Augmentation Strategy:** Active **Mosaic Augmentation** for epochs 1–40. Mosaic is explicitly closed down (`close_mosaic=10`) during the final 10 epochs to guarantee tight, unwarped boundary localization precision.
+* **Augmentation Strategy:** Active **Mosaic Augmentation** for epochs 1–40. Mosaic is explicitly closed down (`close_mosaic=10`) during the final 10 epochs to guarantee tight, unwarped boundary loc[...]
 
 ---
 
@@ -69,15 +70,15 @@ All three variations are trained under strict identical experimental conditions 
 ### 📊 Performance Leaderboard
 
 | Model Architecture | Bounding Box Mode | Precision ($P$) | Recall ($R$) | mAP50 | mAP50-95 (Primary Metric) | Latency (Inference in CPU) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **YOLOv11s-OBB** | Oriented / Rotated | **0.873** | 0.858 | **0.913** | **0.791** | 5.7 ms / image |
 | **YOLOv11s-Horizontal**| Axis-Aligned | 0.869 | **0.866** | 0.905 | 0.693 | 5.8 ms / image |
 | **YOLOv26n** | Axis-Aligned | 0.749 | 0.732 | 0.794 | 0.600 | **3.4 ms / image** |
 <img width="1484" height="583" alt="image" src="https://github.com/user-attachments/assets/31f49b41-631d-46f3-9f0a-7b7f05732106" />
 
 ### 🔍 Key Engineering Takeaways
-1. **The OBB Localization Advantage:** YOLOv11s-OBB provides an absolute gain of **+0.098** in strict localization accuracy (mAP50-95) over its horizontal twin. This represents a **14.1% relative improvement**. By eliminating irrelevant background ground clutter within a box, the oriented box ensures higher IoU calculation scores.
-2. **YOLOv26 Speed Superiority:** Despite its smaller parameter architecture footprint, YOLOv26n drops inference down to **3.4 ms**. Its **NMS-Free** design eliminates the processing overhead typically caused by post-prediction sorting bottlenecks.
+1. **The OBB Localization Advantage:** YOLOv11s-OBB provides an absolute gain of **+0.098** in strict localization accuracy (mAP50-95) over its horizontal twin. This represents a **14.1% relative impr[...]
+2. **YOLOv26 Speed Superiority:** Despite its smaller parameter architecture footprint, YOLOv26n drops inference down to **3.4 ms**. Its **NMS-Free** design eliminates the processing overhead typicall[...]
 
 ---
 
@@ -106,4 +107,3 @@ path/to/your/workspace/mil-plane/
 3. Execute the **Preprocessing** cell to parse the XML files into standard YOLO training labels.
 4. Run the respective **Training** cells for the models you wish to evaluate.
 5. Launch the final **Gradio UI Dashboard** cell to manually test images against the trained weights.
-
