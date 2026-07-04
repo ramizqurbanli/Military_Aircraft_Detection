@@ -1,5 +1,10 @@
-
 # 🛰️ Aircraft Detection in Aerial Imagery: YOLOv11 vs. YOLOv26 Comparative Analysis
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch)
+![Ultralytics](https://img.shields.io/badge/Ultralytics-YOLO-111F68)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter)
+[![Google Colab](https://img.shields.io/badge/Open%20in-Colab-F9AB00?logo=googlecolab)](https://colab.research.google.com/drive/1mHSmVubNYTysTgPzh9Fa4KP8sbpMdnyy?usp=sharing)
 
 A deep learning pipeline designed to train, evaluate, and benchmark three high-performance object detection architectures on top-down aerial surveillance imagery. This entire project is structured, executed, and analyzed inside a single Master Jupyter Notebook.
 
