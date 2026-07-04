@@ -5,6 +5,8 @@
 ![Ultralytics](https://img.shields.io/badge/Ultralytics-YOLO-111F68)
 ![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter)
 [![Google Colab](https://img.shields.io/badge/Open%20in-Colab-F9AB00?logo=googlecolab)](https://colab.research.google.com/drive/1mHSmVubNYTysTgPzh9Fa4KP8sbpMdnyy?usp=sharing)
+[![Dataset: MAR20](https://img.shields.io/badge/Dataset-Google%20Drive-4285F4?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1syZVVdd-k6zbWglQPyn_ZAwqbP2r-i1R?usp=sharing)
+[![Paper](https://img.shields.io/badge/Paper-MAR20-blue?logo=googlescholar)](https://doi.org/10.11834/jrs.20222139)
 
 A deep learning pipeline designed to train, evaluate, and benchmark three high-performance object detection architectures on top-down aerial surveillance imagery. This entire project is structured, executed, and analyzed inside a single Master Jupyter Notebook.
 
