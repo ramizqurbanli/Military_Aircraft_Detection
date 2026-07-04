@@ -1,5 +1,6 @@
 # 🛰️ Aircraft Detection in Aerial Imagery: YOLOv11 vs. YOLOv26 Comparative Analysis
 
+![AI Tool](https://img.shields.io/badge/Type-AI%20Tool-blue)
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch)
 ![Ultralytics](https://img.shields.io/badge/Ultralytics-YOLO-111F68)
