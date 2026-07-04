@@ -3,7 +3,6 @@
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch)
 ![Ultralytics](https://img.shields.io/badge/Ultralytics-YOLO-111F68)
-![AI-assisted](https://img.shields.io/badge/AI%20assisted-blueviolet?logo=ai)
 ![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter)
 [![Google Colab](https://img.shields.io/badge/Open%20in-Colab-F9AB00?logo=googlecolab)](https://colab.research.google.com/drive/1mHSmVubNYTysTgPzh9Fa4KP8sbpMdnyy?usp=sharing)
 [![Dataset: MAR20](https://img.shields.io/badge/Dataset-Google%20Drive-4285F4?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1syZVVdd-k6zbWglQPyn_ZAwqbP2r-i1R?usp=sharing)
